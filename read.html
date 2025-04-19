@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Applications - Student Internship System</title>
+  <link rel="stylesheet" href="css/project.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Student Internship & Job Application System</h1>
+      <nav>
+        <a href="Home.html">Home</a>
+        <div class="dropdown" aria-haspopup="true">
+          <button class="dropbtn" aria-expanded="false">Manage Applications</button>
+          <div class="dropdown-content" aria-label="Application management submenu">
+            <a href="create.html">Create</a>
+            <a href="read.html">View</a>
+            <a href="update.html">Update</a>
+            <a href="delete.html">Delete</a>
+          </div>
+        </div>
+        <a href="Visualizations.html">Progress Tracker</a>
+        <a href="about.html">About Us</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h2>Your Applications</h2>
+      
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Position</th>
+              <th>Date Applied</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>TechCorp Inc.</td>
+              <td>Software Developer Intern</td>
+              <td>2025-06-15</td>
+              <td><span class="status-badge status-interview">Interview Scheduled</span></td>
+              <td>
+                <a href="update.html?id=1" class="btn btn-sm">Edit</a>
+                <a href="delete.html?id=1" class="btn btn-sm btn-danger">Delete</a>
+              </td>
+            </tr>
+            <tr>
+              <td>DataSystems LLC</td>
+              <td>Data Analyst</td>
+              <td>2025-06-10</td>
+              <td><span class="status-badge status-applied">Applied</span></td>
+              <td>
+                <a href="update.html?id=2" class="btn btn-sm">Edit</a>
+                <a href="delete.html?id=2" class="btn btn-sm btn-danger">Delete</a>
+              </td>
+            </tr>
+            <tr>
+              <td>WebSolutions</td>
+              <td>Frontend Developer</td>
+              <td>2025-05-28</td>
+              <td><span class="status-badge status-rejected">Rejected</span></td>
+              <td>
+                <a href="update.html?id=3" class="btn btn-sm">Edit</a>
+                <a href="delete.html?id=3" class="btn btn-sm btn-danger">Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-actions">
+        <a href="create.html" class="btn">+ Add New Application</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Student Internship & Job App System</p>
+    </div>
+  </footer>
+</body>
+</html>
