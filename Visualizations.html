@@ -1,70 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progress Tracker - Student Internship System</title>
-  <link rel="stylesheet" href="css/project.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <title>Data Visualization - Internship & Job Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracker - Student Internship System</title>
+    <link rel="stylesheet" href="css/project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/project.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Student Internship & Job Application System</h1>
-      <nav>
-        <a href="Home.html">Home</a>
-        <div class="dropdown" aria-haspopup="true">
-          <button class="dropbtn" aria-expanded="false">Manage Applications</button>
-          <div class="dropdown-content" aria-label="Application management submenu">
-            <a href="create.html">Create</a>
-            <a href="read.html">View</a>
-            <a href="update.html">Update</a>
-            <a href="delete.html">Delete</a>
-          </div>
-        </div>
-        <a href="Visualizations.html">Progress Tracker</a>
-        <a href="about.html">About Us</a>
-        <a href="login.html">Login</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <div class="card">
-      <h2>Application Analytics</h2>
-      <p class="chart-description">Track your internship/job application progress through these interactive visualizations.</p>
-      
-      <div class="chart-row">
-        <div class="chart-box">
-          <h3>Applications by Status</h3>
-          <canvas id="statusChart"></canvas>
-        </div>
-        <div class="chart-box">
-          <h3>Monthly Applications</h3>
-          <canvas id="timelineChart"></canvas>
-        </div>
-      </div>
-      
-      <div class="chart-row">
-        <div class="chart-box">
-          <h3>Applications by Type</h3>
-          <canvas id="typeChart"></canvas>
-        </div>
-        <div class="chart-box">
-          <h3>Response Rate</h3>
-          <canvas id="responseChart"></canvas>
-        </div>
-      </div>
-    </div>
-  </main>
+    <header>
+        <div class="container">
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Student Internship & Job App System</p>
-    </div>
-  </footer>
+            <h1>Student Internship & Job Application System</h1>
+            <nav>
+                <a href="Home.html">Home</a>
+                <div class="dropdown" aria-haspopup="true">
+                    <button class="dropbtn" aria-expanded="false">Manage Applications</button>
+                    <div class="dropdown-content" aria-label="Application management submenu">
+                        <a href="create.html">Create</a>
+                        <a href="read.html">View</a>
+                        <a href="update.html">Update</a>
+                        <a href="delete.html">Delete</a>
+                    </div>
+                </div>
+                <a href="Visualizations.html">Progress Tracker</a>
+                <a href="about.html">About Us</a>
+                <a href="login.html">Login</a>
+            </nav>
+            </div>
+    </header>
 
-  <script src="javascript/chart.js"></script>
+    <main>
+
+        <!-- ✅ Row 1: Bar + Pie + Doughnut (all in the same line) -->
+        <section>
+            <h3>Applications Overview</h3>
+            <div class="chart-row three-cols">
+                <div class="chart-box"><canvas id="barChart"></canvas></div>
+                <div class="chart-box"><canvas id="appStatusChart"></canvas></div>
+                <div class="chart-box"><canvas id="modeChart"></canvas></div>
+            </div>
+        </section>
+
+        <!-- ✅ Row 2: Line + Scatter -->
+        <section>
+            <h3>Performance Metrics</h3>
+            <div class="chart-row two-cols">
+                <div class="chart-box"><canvas id="lineChart"></canvas></div>
+                <div class="chart-box"><canvas id="scatterChart"></canvas></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Student Internship & Job App System</p>
+    </footer>
+
+    <script src="javascript/chart.js"></script>
 </body>
 </html>
