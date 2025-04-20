@@ -4,6 +4,12 @@
     padding: 0;
     background-color: #f4f4f4;
 }
+.app-overview-row canvas {
+    height: 500px !important; /* or increase to 550px if needed */
+}
+.app-overview-row .chart-box {
+    min-height: 550px;
+}
 
 header, footer {
     background-color: #1f2937;
@@ -41,8 +47,9 @@ section {
 }
 
 .three-cols .chart-box {
-    flex: 1 1 30%;
-    max-width: 32%;
+    flex: 1 1 40%;
+    max-width: 42%;
+    min-width: 300px;
 }
 
 .chart-box {
@@ -52,14 +59,57 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+.center-box {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+}
+
+.three-cols canvas {
+    
+    height: 450px !important;
+}
+
 
 canvas {
     width: 100% !important;
-    height: 350px !important;
+    height: 550px !important;
     max-width: 100%;
     display: block;
     margin: auto;
 }
+.intro-section {
+    text-align: center;
+    max-width: 900px;
+    margin: 40px auto 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+    .intro-section h2 {
+        margin-bottom: 10px;
+        font-size: 1.8rem;
+        color: #1f2937;
+    }
+
+    .intro-section p {
+        font-size: 1rem;
+        color: #4b5563;
+        line-height: 1.6;
+    }
+.chart-description {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .cta-button {
     display: inline-block;
