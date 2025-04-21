@@ -763,7 +763,7 @@ canvas {
     margin: 40px 0;
 }
 
-.erd-placeholder {
+.erd {
     background-color: #f3f4f6;
     border: 2px dashed #d1d5db;
     border-radius: 8px;
@@ -1007,3 +1007,76 @@ canvas {
     .btn-primary:hover {
         background-color: var(--primary-dark);
     }
+
+/* ===== NEW RULES ONLY ===== */
+
+/* 1. Logo positioning */
+header {
+    position: relative; /* New context for logo */
+}
+
+.header-logo {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    height: 50px;
+    width: auto;
+    z-index: 10;
+}
+
+/* 2. Hamburger button (hidden by default) */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: auto;
+    z-index: 100;
+}
+
+/* 3. Mobile-specific styles (only activates <768px) */
+@media (max-width: 768px) {
+    /* Mobile menu panel */
+    .header-nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden by default */
+        width: 70%;
+        height: 100vh;
+        background: var(--primary-dark);
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease;
+        z-index: 90;
+    }
+
+        /* Mobile menu open state */
+        .header-nav.mobile-open {
+            right: 0;
+        }
+
+    /* Show hamburger */
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Stack nav items */
+    .header-nav > a,
+    .header-nav > .dropdown {
+        flex: 0;
+        text-align: left;
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    /* Adjust dropdowns for mobile */
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        transform: none;
+        left: auto;
+        box-shadow: none;
+        background: transparent;
+    }
+}

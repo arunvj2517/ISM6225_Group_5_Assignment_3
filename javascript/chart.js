@@ -1,4 +1,18 @@
 ﻿// Pie Chart: Applications Per Internship Role
+// Mobile Menu Toggle Functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const headerNav = document.querySelector('.header-nav');
+
+    if (hamburger && headerNav) {
+        hamburger.addEventListener('click', function () {
+            headerNav.classList.toggle('mobile-open');
+            this.setAttribute('aria-expanded',
+                this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+        });
+    }
+});
+
 const roleCtx = document.getElementById('centerPieChart')?.getContext('2d');
 if (roleCtx) {
     new Chart(roleCtx, {
@@ -26,6 +40,7 @@ if (roleCtx) {
         }
     });
 }
+
 
 // Line Chart: Monthly Internship Applications
 const lineCtx = document.getElementById('lineChart').getContext('2d');
