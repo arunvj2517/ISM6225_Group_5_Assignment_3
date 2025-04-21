@@ -8,87 +8,96 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Student Internship & Job Application System</h1>
-      <nav>
-        <a href="Home.html">Home</a>
-        <div class="dropdown" aria-haspopup="true">
-          <button class="dropbtn" aria-expanded="false">Manage Applications</button>
-          <div class="dropdown-content" aria-label="Application management submenu">
-            <a href="create.html">Create</a>
-            <a href="read.html">View</a>
-            <a href="update.html">Update</a>
-            <a href="delete.html">Delete</a>
-          </div>
+    <header>
+        <div class="container">
+            <h1>Student Internship & Job Application System</h1>
+            <nav class="header-nav">
+                <a href="Home.html" class="nav-link" style="color: white; text-decoration: none; display: inline-flex; align-items: center; font-size: 16px; font-weight: 700;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#1d4ed8" style="margin-right: 4px;">
+                        <path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a1 1 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm9-8.586 6 6V15l.001 5H6v-9.586l6-6z" />
+                    </svg>
+                    Home
+                </a>
+                <div class="dropdown" aria-haspopup="true">
+                    <button class="dropbtn" aria-expanded="false">Manage Applications</button>
+                    <div class="dropdown-content" aria-label="Application management submenu">
+                        <a href="create.html">Create</a>
+                        <a href="read.html">View</a>
+                        <a href="update.html">Update</a>
+                        <a href="delete.html">Delete</a>
+                    </div>
+                </div>
+                <a href="Visualizations.html">Progress Tracker</a>
+                <a href="about.html">About Us</a>
+                <a href="login.html" class="login-link">
+                    Login
+                    <img src="images/user_login.png" alt="login logo">
+                    <img src="images/application-logo.webp" alt="Logo" style="position: fixed; top: 5px; right: 10px; width: 100px; height: auto;">
+                </a>
+            </nav>
         </div>
-        <a href="Visualizations.html">Progress Tracker</a>
-        <a href="about.html">About Us</a>
-        <a href="login.html">Login</a>
-      </nav>
-    </div>
-  </header>
+    </header>
 
-  <main class="container">
-    <div class="card">
-      <h2>Your Applications</h2>
-      
-      <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Company</th>
-              <th>Position</th>
-              <th>Date Applied</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>TechCorp Inc.</td>
-              <td>Software Developer Intern</td>
-              <td>2025-06-15</td>
-              <td><span class="status-badge status-interview">Interview Scheduled</span></td>
-              <td>
-                <a href="update.html?id=1" class="btn btn-sm">Edit</a>
-                <a href="delete.html?id=1" class="btn btn-sm btn-danger">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td>DataSystems LLC</td>
-              <td>Data Analyst</td>
-              <td>2025-06-10</td>
-              <td><span class="status-badge status-applied">Applied</span></td>
-              <td>
-                <a href="update.html?id=2" class="btn btn-sm">Edit</a>
-                <a href="delete.html?id=2" class="btn btn-sm btn-danger">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td>WebSolutions</td>
-              <td>Frontend Developer</td>
-              <td>2025-05-28</td>
-              <td><span class="status-badge status-rejected">Rejected</span></td>
-              <td>
-                <a href="update.html?id=3" class="btn btn-sm">Edit</a>
-                <a href="delete.html?id=3" class="btn btn-sm btn-danger">Delete</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <main class="container">
+        <div class="card">
+            <h2>Your Applications</h2>
 
-      <div class="table-actions">
-        <a href="create.html" class="btn">+ Add New Application</a>
-      </div>
-    </div>
-  </main>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Position</th>
+                            <th>Date Applied</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TechCorp Inc.</td>
+                            <td>Software Developer Intern</td>
+                            <td>2025-06-15</td>
+                            <td><span class="status-badge status-interview">Interview Scheduled</span></td>
+                            <td>
+                                <a href="update.html?id=1" class="btn btn-sm">Edit</a>
+                                <a href="delete.html?id=1" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>DataSystems LLC</td>
+                            <td>Data Analyst</td>
+                            <td>2025-06-10</td>
+                            <td><span class="status-badge status-applied">Applied</span></td>
+                            <td>
+                                <a href="update.html?id=2" class="btn btn-sm">Edit</a>
+                                <a href="delete.html?id=2" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>WebSolutions</td>
+                            <td>Frontend Developer</td>
+                            <td>2025-05-28</td>
+                            <td><span class="status-badge status-rejected">Rejected</span></td>
+                            <td>
+                                <a href="update.html?id=3" class="btn btn-sm">Edit</a>
+                                <a href="delete.html?id=3" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Student Internship & Job App System</p>
-    </div>
-  </footer>
+            <div class="table-actions">
+                <a href="create.html" class="btn">+ Add New Application</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Student Internship & Job App System | Built by Team 5</p>
+        </div>
+    </footer>
 </body>
 </html>
